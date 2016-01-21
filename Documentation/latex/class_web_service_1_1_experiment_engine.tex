@@ -1,0 +1,130 @@
+\hypertarget{class_web_service_1_1_experiment_engine}{}\section{Web\+Service.\+Experiment\+Engine Class Reference}
+\label{class_web_service_1_1_experiment_engine}\index{Web\+Service.\+Experiment\+Engine@{Web\+Service.\+Experiment\+Engine}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Status \hyperlink{class_web_service_1_1_experiment_engine_ab26c0f9858c2957df8d265abbafdf458}{check\+For\+New\+Experiment} (\hyperlink{class_web_service_1_1_rest_a_p_i}{Rest\+A\+P\+I} rest\+A\+P\+I)
+\begin{DoxyCompactList}\small\item\em Sends a request to the server if an experiment is queued. \end{DoxyCompactList}\item 
+Status \hyperlink{class_web_service_1_1_experiment_engine_a7aa063527b64d6c67dcc5367c19b627b}{dequeue\+Experiment} (\hyperlink{class_web_service_1_1_rest_a_p_i}{Rest\+A\+P\+I} rest\+A\+P\+I)
+\begin{DoxyCompactList}\small\item\em Sends request to server i order to retrieve experiment specification. \end{DoxyCompactList}\item 
+Status \hyperlink{class_web_service_1_1_experiment_engine_aedaffdb21915bc99c364d254cb8ed7e2}{return\+Data} (\hyperlink{class_web_service_1_1_rest_a_p_i}{Rest\+A\+P\+I} rest\+A\+P\+I)
+\begin{DoxyCompactList}\small\item\em Sends experiment data to the server. \end{DoxyCompactList}\item 
+Status \hyperlink{class_web_service_1_1_experiment_engine_a182328674dd170c392c8da1b3ec7d85c}{perform\+Experiment} ()
+\begin{DoxyCompactList}\small\item\em Here is the interface to the dummy experiment. If a real experiment will be implemented, you should pass its date inside this method. \end{DoxyCompactList}\item 
+Status \hyperlink{class_web_service_1_1_experiment_engine_a8c3b5998c15bfa07b418115555975259}{abort\+Experiment} (\hyperlink{class_web_service_1_1_rest_a_p_i}{Rest\+A\+P\+I} rest\+A\+P\+I, string error)
+\begin{DoxyCompactList}\small\item\em This method gets called if a success parameter is \char`\"{}false\char`\"{}. It forwards the error report to server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_web_service_1_1_experiment_engine_a431e608fb28f7f145961db454aa41aba}{}string {\bfseries error\+Report}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class_web_service_1_1_experiment_engine_a431e608fb28f7f145961db454aa41aba}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_service_1_1_experiment_engine_a8c3b5998c15bfa07b418115555975259}{}\index{Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}!abort\+Experiment@{abort\+Experiment}}
+\index{abort\+Experiment@{abort\+Experiment}!Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}}
+\subsubsection[{abort\+Experiment(\+Rest\+A\+P\+I rest\+A\+P\+I, string error)}]{\setlength{\rightskip}{0pt plus 5cm}Status Web\+Service.\+Experiment\+Engine.\+abort\+Experiment (
+\begin{DoxyParamCaption}
+\item[{{\bf Rest\+A\+P\+I}}]{rest\+A\+P\+I, }
+\item[{string}]{error}
+\end{DoxyParamCaption}
+)}\label{class_web_service_1_1_experiment_engine_a8c3b5998c15bfa07b418115555975259}
+
+
+This method gets called if a success parameter is \char`\"{}false\char`\"{}. It forwards the error report to server. 
+
+insert detailed description for abort\+Experiment here... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rest\+A\+P\+I} & In\+: R\+E\+S\+Tapi object with personalized x-\/apikey and user\+I\+D \\
+\hline
+{\em error} & In\+: error report of concerning request/response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New status for state machine. 
+\end{DoxyReturn}
+\hypertarget{class_web_service_1_1_experiment_engine_ab26c0f9858c2957df8d265abbafdf458}{}\index{Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}!check\+For\+New\+Experiment@{check\+For\+New\+Experiment}}
+\index{check\+For\+New\+Experiment@{check\+For\+New\+Experiment}!Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}}
+\subsubsection[{check\+For\+New\+Experiment(\+Rest\+A\+P\+I rest\+A\+P\+I)}]{\setlength{\rightskip}{0pt plus 5cm}Status Web\+Service.\+Experiment\+Engine.\+check\+For\+New\+Experiment (
+\begin{DoxyParamCaption}
+\item[{{\bf Rest\+A\+P\+I}}]{rest\+A\+P\+I}
+\end{DoxyParamCaption}
+)}\label{class_web_service_1_1_experiment_engine_ab26c0f9858c2957df8d265abbafdf458}
+
+
+Sends a request to the server if an experiment is queued. 
+
+insert detailed description for check\+For\+New\+Experiment here... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rest\+A\+P\+I} & In\+: R\+E\+S\+Tapi object with personalized x-\/apikey and user\+I\+D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New status for state machine. 
+\end{DoxyReturn}
+\hypertarget{class_web_service_1_1_experiment_engine_a7aa063527b64d6c67dcc5367c19b627b}{}\index{Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}!dequeue\+Experiment@{dequeue\+Experiment}}
+\index{dequeue\+Experiment@{dequeue\+Experiment}!Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}}
+\subsubsection[{dequeue\+Experiment(\+Rest\+A\+P\+I rest\+A\+P\+I)}]{\setlength{\rightskip}{0pt plus 5cm}Status Web\+Service.\+Experiment\+Engine.\+dequeue\+Experiment (
+\begin{DoxyParamCaption}
+\item[{{\bf Rest\+A\+P\+I}}]{rest\+A\+P\+I}
+\end{DoxyParamCaption}
+)}\label{class_web_service_1_1_experiment_engine_a7aa063527b64d6c67dcc5367c19b627b}
+
+
+Sends request to server i order to retrieve experiment specification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rest\+A\+P\+I} & In\+: R\+E\+S\+Tapi object with personalized x-\/apikey and user\+I\+D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New status for state machine. 
+\end{DoxyReturn}
+\hypertarget{class_web_service_1_1_experiment_engine_a182328674dd170c392c8da1b3ec7d85c}{}\index{Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}!perform\+Experiment@{perform\+Experiment}}
+\index{perform\+Experiment@{perform\+Experiment}!Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}}
+\subsubsection[{perform\+Experiment()}]{\setlength{\rightskip}{0pt plus 5cm}Status Web\+Service.\+Experiment\+Engine.\+perform\+Experiment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_service_1_1_experiment_engine_a182328674dd170c392c8da1b3ec7d85c}
+
+
+Here is the interface to the dummy experiment. If a real experiment will be implemented, you should pass its date inside this method. 
+
+insert detailed description for perform\+Experiment here... 
+
+\begin{DoxyReturn}{Returns}
+New status for state machine. 
+\end{DoxyReturn}
+\hypertarget{class_web_service_1_1_experiment_engine_aedaffdb21915bc99c364d254cb8ed7e2}{}\index{Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}!return\+Data@{return\+Data}}
+\index{return\+Data@{return\+Data}!Web\+Service\+::\+Experiment\+Engine@{Web\+Service\+::\+Experiment\+Engine}}
+\subsubsection[{return\+Data(\+Rest\+A\+P\+I rest\+A\+P\+I)}]{\setlength{\rightskip}{0pt plus 5cm}Status Web\+Service.\+Experiment\+Engine.\+return\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Rest\+A\+P\+I}}]{rest\+A\+P\+I}
+\end{DoxyParamCaption}
+)}\label{class_web_service_1_1_experiment_engine_aedaffdb21915bc99c364d254cb8ed7e2}
+
+
+Sends experiment data to the server. 
+
+insert detailed description for return\+Data here... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rest\+A\+P\+I} & In\+: R\+E\+S\+Tapi object with personalized x-\/apikey and user\+I\+D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New status for state machine. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/t.\+wilhelmer.\+A\+T\+R\+O\+N3\+D/\+Documents/\+Visual Studio 2013/\+Projects/\+Web\+Service\+\_\+\+V1.\+01/\+Web\+Service/\+Web\+Service/\hyperlink{_experiment_engine_8cs}{Experiment\+Engine.\+cs}\end{DoxyCompactItemize}

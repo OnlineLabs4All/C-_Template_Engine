@@ -1,0 +1,38 @@
+V1.\+02
+
+\begin{DoxyParagraph}{}
+This an experiment engine coded in c\#. It is implemented as a state machine. The machine has following states\+:
+\begin{DoxyItemize}
+\item C\+H\+E\+C\+K\+F\+O\+R\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T
+\item D\+E\+Q\+U\+E\+U\+E\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T
+\item P\+E\+R\+F\+O\+R\+M\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T
+\item R\+E\+T\+U\+R\+N\+D\+A\+T\+A
+\item R\+E\+L\+E\+A\+S\+E\+E\+N\+G\+I\+N\+E
+\item E\+R\+R\+O\+R
+\item E\+X\+C\+E\+P\+T\+I\+O\+N
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The normal operation steps are logged in Evaluation\+Log.\+txt. In case of an exception, more details can be found in the Error\+Log.\+txt.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+C\+H\+E\+C\+K\+F\+O\+R\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+: The initial state. It sends a request to server in order to see if there is an experiment in the queue. If so, the new status will be D\+E\+Q\+U\+E\+U\+E\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T. In case there is no experiment, it keeps on polling. The polling will only get aborted if an exception rises.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+D\+E\+Q\+U\+E\+U\+E\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+: This state retrieves the experiment specification from the server and stores the data for the further usage in the dummy experiment.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+P\+E\+R\+F\+O\+R\+M\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+: Here is the interface for the dummy experiment or the \char`\"{}real experiment\char`\"{}. The gained data from the former state gets passed to the experiment and results are added to the concerning experiment request class.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+R\+E\+T\+U\+R\+N\+D\+A\+T\+A\+: This state forms a request for the server. The data for this request comes form the experiment request class which was gained in the former state.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+R\+E\+L\+E\+A\+S\+E\+E\+N\+G\+I\+N\+E\+: -\/-\/-\/--- not used yet -\/-\/-\/---
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+E\+R\+R\+O\+R\+: The error states becomes active if the \char`\"{}success\char`\"{} parameter of a response is \char`\"{}false\char`\"{}. If this state occurs, the state will be set back to C\+H\+E\+C\+K\+F\+O\+R\+E\+X\+P\+E\+R\+I\+M\+E\+N\+T.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+E\+X\+C\+E\+P\+T\+I\+O\+N\+: If an exception occurs, this state will abort the polling and writes a info messages in the console. More details can be found in the Error\+Log.\+txt. 
+\end{DoxyParagraph}
